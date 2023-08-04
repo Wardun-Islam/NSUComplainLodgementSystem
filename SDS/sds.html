@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script>
+    function printContent(el)
+    {
+        var restorepage = document.body.innerHTML;
+        var printcontent =document.getElementById(el).innerHTML;
+        document.body.innerHTML =printcontent;
+        window.print();
+        document.body.innerHTML = restorepage;
+    }
+    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SDS</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+   
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading" style="font-weight: bold;">Table of Contents</div>
+      <div class="list-group list-group-flush">
+      
+
+
+		<a class=" btn btn-link btn btn-dark" href="#i">Introduction</a>
+		<a class=" btn btn-link btn btn-dark mt-2" href="#dc">Document Conventions</a>
+		<a class=" btn btn-link btn btn-dark mt-2" href="#ddc">Description of Design Components</a>
+		<a class=" btn btn-link btn btn-dark mt-2" href="#hlcd">High-Level Component Design</a>
+		<a class=" btn btn-link btn btn-dark mt-2" href="#cd">Class diagrams</a>
+		<a class=" btn btn-link btn btn-dark mt-2" href="#dd">Database Design</a>
+		<a class=" btn btn-link btn btn-dark mt-2" href="#ip">Implementation plan</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+               <button onclick="printContent('full')" class="btn btn-primary" id="menu-toggle">Download</button> 
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+
+			<br>
+			<br>
+			<br>
+
+			  <!-- Authors          -->  
+        	
+		        		<div class="a  text-center">
+				           <h1 class="a">Software Design</h1>
+				           <h1>Specification</h1><br/>
+				           <h2>for</h2><br/>
+				           <h1>Reading Progress Tracker</h1> <br/>
+				           <p>Version v1.0 approved</p> 
+				           <p>Date Created: 23-August-2021</p> <br/>
+				           <p>Prepared By: </p>
+				           <p><b><u>Team Members</u></b></p1><br/>
+				           <p1>1.</p1>Saiful Islam - 1731604042<br/>  
+				           <p1>2. Md. Jahirul Islam - 1821368642</p1><br/>
+				           <p1>3. Nahid Hasan Sangram - 1822208642 </p1><br/>
+				           <p1>4. Arjuman Ara Baishakhi - 1922116642 </p1><br/>
+			        </div>	
+        		
+
+	        <br>
+	        <br>
+	        <br>
+		  
+        		
+		  <!-- Item 1 content starts         -->
+     <div id="full">
+		  <div id = "i"  >
+
+		  	<h2 class=" text-center" >1. Inroducton</h2>
+		  	<br>
+
+
+
+		  	<div>
+		  		<!-- start section 1 from here -->
+		  		<p>
+		  		The purpose of this Software Design Specification (SDS) is to provide a documentation focusing on specifying a high-level view of the architecture of our system and on the interaction between the user and the system. This document will also provide a high-level design framework around which our project "Reading Progress Tracker" will be built.
+		  		<br>
+		  		<br>
+		  		This is the era of modern technologies and sheer development. In this developing era online classes for students are very trending and almost became common to all the students of schools, colleges and universities. But the question is how many students are taking these online classes seriously? How many of them are interested? So, our project serves the answers for the students of junior classes. In order to confirm how attentive or interested a particular student is towards the studies can be detected by their facial expressions which will then be recorded by the teachers and according to their wants the teacher might try to improve the academic ways of teaching. For this we need to add features like the students will have access to the online class and our app will be a proper platform for doing online class session. Then their facial expressions would be recorded via the web camera and front camera of the phone during the classes. By such initiative we think the online class session would be very effective and interesting for the students. Also this would add a good dimension to the field of software engineering.
+		  		</p>
+
+
+		  	</div>
+
+		  	
+
+		  </div>
+		  <!-- Item 1 content ends -->
+
+		  <br>
+		  <br>
+		  <br>
+
+		   <!-- Item 2 content starts         -->
+		  <div id ="dc"  >
+		  	<h2 class=" text-center" >2. Document Conventions</h2>
+		  	<br>
+
+		  	<div>
+		  		<!-- start section 2 from here -->
+		  		<p>
+		  			Typical document conventions are maintained where main topics are bold and are numbered. Sub topics are bold, have a smaller font size and are numbered with the main topic number as a prefix, e.g. 1.1. Special names and technical terminology are italicized.
+		  			<br>
+		  			<br>
+		  			
+		  		</p>
+<!-- 		  		<img src="images/image_name.png" height="80%" width="80%"> -->
+		  	</div>
+
+		  	
+
+		  </div>
+		  <!-- Item 2 content ends -->
+
+		  <br>
+		  <br>
+		  <br>
+
+		  	<!-- Item 3 content starts -->
+		  <div id = "ddc"  >
+		  	<h2 class=" text-center" >3.Description of Design Components</h2>
+		  	<br>
+
+		  	<div>
+		  		<!-- start section 3 from here -->
+
+
+		  		<br>
+		  		<br>
+		  		<p>
+		  			For server-side we use express.js. Express.js is a web application framework for Node.js. It provides various features that make web application development fast and easy which otherwise takes more time using only Node.js.Express.js is based on the Node.js middleware module called connect which in turn uses http module. So, any middleware which is based on connect will also work with Express.js.Its Easy to configure and customize.Easy to integrate with different template engines like Jade, Vash, EJS etc.Allows usEasy to serve static files and resources of our application to define an error handling middleware.Allows us to create REST API server.
+		  		</p>
+		  		<br>
+		  			<br>
+
+		  		<p>
+		  			For Client side we use react js.React JS is basically a JavaScript library.Compared to other frontend frameworks, the React code is easier to maintain and is flexible due to its modular structure.React basically allows developers to utilize individual parts of their application on both client-side and the server-side, which ultimately boosts the speed of the development process.It ensures faster rendering.It is single page application.guarantees stable code.It is SEO friendly-its ability to deal with a common search engine failure to read JavaScript-heavy apps.
+		  		</p>
+
+		  		<br>
+		  		<br>
+		  			
+		  		
+
+
+		  	</div>
+		  	
+
+		  
+
+		  </div>
+
+		  <!-- Item 3 content ends -->
+
+
+		  <br>
+		  <br>
+		  <br>
+
+		   <!-- Item 4 content starts         -->
+		  <div id ="hlcd"  >
+		  	<h2 class=" text-center" >4. High-Level Component Design</h2>
+		  	<br>
+
+		  	<div>
+		  		<!-- start section 4 from here -->
+		  				  		<h3 ><b>4.1:</b> High-Level Component diagrams</h3>
+		  		<br>
+		  		<br>
+		  		<img src="images/hcd.png" height="80%" width="80%">
+		  			<br>
+<!-- 		  			We will also use the "Google Cloud Vision" Application Program Interface (API) in order to read hand-written prescriptions/drug names. This API will process the images uploaded by users and convert handwritings into texts, and then the system will search through our database for matching texts as drug names.
+		  		</p> -->
+		  		
+
+
+		  	</div>
+		  	
+		  </div>
+		  <!-- Item 4 content ends -->
+
+		  <br>
+		  <br>
+		  <br>
+
+		  <!-- Item 5 starts  -->
+		  <div id = "cd"  >
+		  	<h2 class=" text-center" >5. Class diagrams</h2>
+		  	<br>
+		  	<br>
+
+		  	<div>
+		  		<!-- start section 5 from here -->
+		  		<h3 ><b>5.1:</b> Class diagrams</h3>
+		  		<br>
+		  		<br>
+		  		<img src="images/class_diagram.png " height="80%" width="80%">
+
+		  		<br>
+		  		<br>
+		  	</div>
+
+		  	
+		  </div>
+
+		  <!-- Item 5 ends -->
+
+		  <br>
+		  <br>
+		  <br>
+
+		   <!-- Item 6 content starts         -->
+		  <div id ="dd"  >
+		  	<h2 class=" text-center" >6. Database Design</h2>
+		  	<br>
+		  		<div>
+		  		<h3 ><b>6.1:</b> ER diagrams</h3>
+		  		<br>
+		  		<br>
+		  		<img src="images/erd.png " height="80%" width="80%">
+
+		  		<br>
+		  		<br>
+		  		
+
+
+		  		</div>
+		  			  	
+		  </div>
+		  <!-- Item 6 content ends -->
+
+		  		   <!-- Item 7 content starts         -->
+		  <div id ="ip"  >
+		  	<h2 class=" text-center" >7. Implementation plan</h2>
+		  	<br>
+		  		<div>
+		  		 We will use react for implimening web frontend, express js for backend server, postgre sql for database and using android studio we will implement android app.
+		  		</div>
+		  			  	
+		  </div>
+		  <!-- Item 7 content ends -->
+
+		  <br>
+		  <br>
+
+		  
+		</div>
+
+		  
+		</div>
+      </div>
+    </div>
+</div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>

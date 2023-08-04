@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SignUpFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:paddingTop="32dp"
+        android:paddingRight="32dp"
+        android:paddingLeft="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="32dp"
+            android:layout_marginBottom="12dp"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:text="Sign Up" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_firstname_edit_text_layout"
+            style="@style/Widget.reading_tracker.TextInputLayout"
+            android:hint="@string/first_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:maxLines="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_firstname_edit_text"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_lastname_edit_text_layout"
+            style="@style/Widget.reading_tracker.TextInputLayout"
+            android:hint="@string/last_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:maxLines="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_lastname_edit_text"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_email_edit_text_layout"
+            style="@style/Widget.reading_tracker.TextInputLayout"
+            android:hint="Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:maxLines="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_email_edit_text"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_newpassword_edit_text_layout"
+            style="@style/Widget.reading_tracker.TextInputLayout"
+            android:hint="@string/new_password_text"
+            android:maxLines="1"
+            app:endIconMode="password_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorIconDrawable="@null"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_newpassword_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_confirmpassword_edit_text_layout"
+            style="@style/Widget.reading_tracker.TextInputLayout"
+            android:hint="@string/confirm_password_text"
+            android:maxLines="1"
+            app:endIconMode="password_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorIconDrawable="@null"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_confirmpassword_edit_text"
+                android:layout_width="match_parent"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addmedia_edit_text_layout"
+            style="@style/Widget.reading_tracker.TextInputLayout"
+            android:hint="Add Image"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/outline_photo_camera_black_24dp"
+            app:errorIconDrawable="@null"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:focusable="false"
+                android:id="@+id/addmedia_edit_text"
+                android:layout_width="match_parent"
+                android:maxLines="3"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="18dp"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:text="Account Type" />
+        <Spinner xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/account_type_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createEventButton"
+            android:text="SIGN UP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Wedget.reading_tracker.Button" />
+    </LinearLayout>
+</ScrollView>

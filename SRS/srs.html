@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+<style>
+	table, th, td {
+	  border: 1px solid black;
+	  border-collapse: collapse;
+	}
+</style>
+<script>
+    function printContent(el)
+    {
+    	console.log(el);
+        var restorepage = document.body.innerHTML;
+        var printcontent =document.getElementById(el).innerHTML;
+        document.body.innerHTML = printcontent;
+        window.print();
+        document.body.innerHTML = restorepage;
+    }
+    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SDS</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+   
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading" style="font-weight: bold;">Table of Contents</div>
+      <div class="list-group list-group-flush">
+		<a class=" btn btn-link btn btn-dark" href="#i">Introduction</a>
+		<a class=" btn btn-link btn btn-dark mt-2" href="#dc">Document Conventions</a>
+		<a class=" btn btn-link btn btn-dark mt-2" href="#ddc">Description of Design Components</a>
+		<a class=" btn btn-link btn btn-dark mt-2" href="#hlcd">High-Level Component Design</a>
+		<a class=" btn btn-link btn btn-dark mt-2" href="#cd">Class diagrams</a>
+		<a class=" btn btn-link btn btn-dark mt-2" href="#dd">Database Design</a>
+		<a class=" btn btn-link btn btn-dark mt-2" href="#ip">Implementation plan</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="full">
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+               <button onclick="printContent('full')" class="btn btn-primary" id="menu-toggle">Download</button> 
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+
+			<br>
+			<br>
+			<br>
+
+			  <!-- Authors          -->  
+        	
+		        		<div class="a  text-center">
+				           <h1 class="a">Software Design</h1>
+				           <h1>Specification</h1><br/>
+				           <h2>for</h2><br/>
+				           <h1>Reading Progress Tracker</h1> <br/>
+				           <p>Version v1.0 approved</p> 
+				           <p>Date Created: 23-August-2021</p> <br/>
+				           <p>Prepared By: </p>
+				           <p><b><u>Team Members</u></b></p1><br/>
+				           <p1>1. Name - Id</p1><br/>  
+				           <p1>2. Name - Id</p1><br/>
+				           <p1>3. Name - Id</p1><br/>
+				           <p1>4. Name - Id </p1><br/>
+			        </div>	
+        		
+
+	        <br>
+	        <br>
+	        <br>
+		  <br>
+		  <br>
+		  <br>
+
+		   		  <!-- Item 2 starts  -->
+		  <div id = "cd"  >
+		  	<h2 class=" text-center" > 2.	Overall Description</h2>
+		  	<br>
+		  	<br>
+			<!-- start section 2.1 from here -->
+		  	<div>
+		  		<h3 ><b>2.1</b>	Product Perspective </h3>
+		  		<br>
+		  		<br></p>
+		  		<br>
+		  		<br>
+		  	</div>
+			<!-- end section 2.1 here -->
+			
+			<!-- start section 2.2 from here -->
+		  	<div>
+		  		<h3 ><b>2.2</b> Product Functions </h3>
+		  		<br>
+		  		<br>
+<h6>The major functionalities of the system are described below:</h6>
+
+<ul>
+  <li>Teacher or Students create accounts.</li>
+  <li>Face detection for PDF reader, randomly captures images and sends to the server for further processing.</li>
+  <li>Facial recognition. </li>
+  <li>Classroom where Student can see their assignments given by a teacher. </li>
+  <li>Students should be able to record any questions </li>
+  <li>Teacher classroom, where he/she can send assignment to students, see their activity, comments. </li>
+</ul>		  		<br>
+		  		<br>
+		  	</div>
+			  <!-- end section 2.2 here -->
+
+			<!-- start section 2.3 from here -->
+		  	<div>
+		  		<h3 ><b>2.3	</b> User Classes and Characteristics </h3>
+		  		<br>
+		  		<br>
+<h6>There will be three user classes in the system:</h6>
+
+
+<ol>
+
+   <li>
+	  <h6>System Administrators:</h6>
+	  <ul>
+		  <li>Have full access to codebase and databases.</li>
+		  <li>Can create and suspend Users – teachers & students.</li>
+		</ul>
+	</li>
+</ol>  		  
+
+<ol>
+	<li>
+	  <h6>Teachers:</h6>
+	  <ul>
+		  <li>Access Teachers Homepage.</li>
+		  <li>Create classroom.</li>
+		  <li>Add or edit assignments or reading materials.</li>
+		  <li>Evaluate completed tasks.</li>
+		</ul>
+	</li>
+</ol>  
+
+<ol>
+
+   <li>
+	  <h6>Student:</h6>
+	  <ul>
+		  <li>Access Student Homepage.</li>
+		  <li>View Profile.</li>
+		  <li>View Assignments or reading materials.</li>
+		  <li>Add comments.</li>
+		</ul>
+	</li>
+</ol>  
+<br>
+		  		<br>
+		  	</div>
+			  <!-- end section 2.3 here -->
+
+		  				  			<!-- start section 1.4 from here -->
+		  	<div>
+		  		<h3 ><b>1.4</b> Product Scope  </h3>
+		  		<br>
+		  		<br>
+				  <p>
+The software system will be Classroom management tool for teachers. This system provide tools for teachers and students to keep track of their assignments, reading materials and other tasks. These tools will remain easy to understand and intuitive to use and will require the least human interaction possible.More specifically, The teacher can assign tasks to students in this system, where he can track real-time updates of the tasks, such as, time spent on reading materials, progress on reports.	  		<br>
+		  	</div>
+			  <!-- end section 1.3 here -->
+		  </div>
+
+		  <!-- Item 2 ends -->
+
+
+
+
+		  <br>
+		  <br>
+		  <br>
+
+		  	<!-- Item 3 content starts -->
+		  <div id = "ddc"  >
+		  	<h2 class=" text-center" >3.Description of Design Components</h2>
+		  	<br>
+
+		  	<div>
+		  		<!-- start section 3 from here -->
+
+
+		  		<br>
+		  		<br>
+		  		<p>
+		  			For server-side we use express.js. Express.js is a web application framework for Node.js. It provides various features that make web application development fast and easy which otherwise takes more time using only Node.js.Express.js is based on the Node.js middleware module called connect which in turn uses http module. So, any middleware which is based on connect will also work with Express.js.Its Easy to configure and customize.Easy to integrate with different template engines like Jade, Vash, EJS etc.Allows usEasy to serve static files and resources of our application to define an error handling middleware.Allows us to create REST API server.
+		  		</p>
+		  		<br>
+		  			<br>
+
+		  		<p>
+		  			For Client side we use react js.React JS is basically a JavaScript library.Compared to other frontend frameworks, the React code is easier to maintain and is flexible due to its modular structure.React basically allows developers to utilize individual parts of their application on both client-side and the server-side, which ultimately boosts the speed of the development process.It ensures faster rendering.It is single page application.guarantees stable code.It is SEO friendly-its ability to deal with a common search engine failure to read JavaScript-heavy apps.
+		  		</p>
+
+		  		<br>
+		  		<br>
+		  			
+		  		
+
+
+		  	</div>
+		  	
+
+		  
+
+		  </div>
+
+		  <!-- Item 3 content ends -->
+
+
+		  <br>
+		  <br>
+		  <br>
+
+		  
+
+		  <br>
+		  <br>
+		  <br>
+
+		  <!-- Item 5 starts  -->
+		  <div id = "cd"  >
+		  	<h2 class=" text-center" >5. Class diagrams</h2>
+		  	<br>
+		  	<br>
+
+		  	<div>
+		  		<!-- start section 5 from here -->
+		  		<h3 ><b>5.1:</b> Class diagrams</h3>
+		  		<br>
+		  		<br>
+		  		<img src="images/class_diagram.png " height="80%" width="80%">
+
+		  		<br>
+		  		<br>
+		  	</div>
+
+		  	
+		  </div>
+
+		  <!-- Item 5 ends -->
+
+		  <br>
+		  <br>
+		  <br>
+
+		   <!-- Item 6 content starts         -->
+		  <div id ="dd"  >
+		  	<h2 class=" text-center" >6. Database Design</h2>
+		  	<br>
+		  		<div>
+		  		<h3 ><b>6.1:</b> ER diagrams</h3>
+		  		<br>
+		  		<br>
+		  		<img src="images/erd.png " height="80%" width="80%">
+
+		  		<br>
+		  		<br>
+		  		
+
+
+		  		</div>
+		  			  	
+		  </div>
+		  <!-- Item 6 content ends -->
+
+		  		   <!-- Item 7 content starts         -->
+		  <div id ="ip"  >
+		  	<h2 class=" text-center" >7. Implementation plan</h2>
+		  	<br>
+		  		<div>
+		  		 We will use react for implimening web frontend, express js for backend server, postgre sql for database and using android studio we will implement android app.
+		  		</div>
+		  			  	
+		  </div>
+		  <!-- Item 7 content ends -->
+
+		  <br>
+		  <br>
+
+		  
+		</div>
+
+		  
+		</div>
+      </div>
+    </div>
+</div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+</div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>
